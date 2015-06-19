@@ -54,16 +54,19 @@ public class ParsePlugin extends CordovaPlugin {
 		    if (users == null) {
 		    	users = new ArrayList<String>();
 		    	users.add(name);
+		    		users.add(name);
+		    			users.add(name);
+		    				users.add(name);
 		    } else {
 		    	if (!users.contains(name)) {
 		    		users.add(name);
 		    	}
 		    }
 		    installation.put(key, users);
-		    installation.saveInBackground();
+		   
 
-		    callbackContext.success();
-		    return true;
+	
+		 
 		} else if ("setCallbackContext".equals(action)) {
             pushNotificationCallbackContext = callbackContext;
 
